@@ -1,0 +1,72 @@
+// ignore_for_file: prefer_const_constructors
+
+import 'package:breathe_better/components/custom_text_field.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter/src/widgets/placeholder.dart';
+
+import '../config/config_color.dart';
+import '../config/style/style.dart';
+
+class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
+
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        title: Text("Login Page", style: Style.pageName()),
+        automaticallyImplyLeading: false
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.only(top: 60.0),
+              child: Center(
+                child: Container(
+                    width: 400,
+                    height: 250,
+                    child: Image(image: AssetImage('static/images/Log In Picture.png'), width: 250, ),
+                ),
+              ),
+            ),
+            CustomTextField(
+              labelText: 'Email',
+              hintText: 'Enter a valid email. E.g. abc@gmail.com'
+            ),
+            CustomTextField(
+              labelText: 'Password',
+              hintText: 'Enter secure password',
+              obscureText: true,
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 30),
+              height: 50,
+              width: 180,
+              decoration: BoxDecoration(
+                  color: ConfigColor.getMaterialColor(Color(0xFF22541D)), borderRadius: BorderRadius.circular(20)),
+                child: Center( child:Text(
+                  'Login',
+                  style: TextStyle(color: Colors.white, fontSize: 20),
+                )),
+              ),
+            SizedBox(
+              height: 80,
+            ),
+            GestureDetector(
+              child: Text("New User? Create Account"), 
+              onTap: () => Navigator.pushNamed(context, "/signup"),
+              ),
+          ],
+        ),
+      ),
+    );
+  }
+}
