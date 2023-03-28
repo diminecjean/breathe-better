@@ -18,4 +18,5 @@
 2. Flutter Samples (https://flutter.github.io/samples/#)
 3. Others </br>
     Onboarding page (https://pub.dev/packages/flutter_onboarding_slider) </br>
-    Flutter components (https://docs.flutterflow.io/customizing-your-app/custom-components)
+    Flutter components (https://docs.flutterflow.io/customizing-your-app/custom-components)</br>
+    Side Menu (https://pub.dev/packages/easy_sidemenu)
