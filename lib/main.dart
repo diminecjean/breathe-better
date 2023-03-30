@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:breathe_better/config/config_color.dart';
+import 'package:breathe_better/page/choose_user_type.dart';
 import 'package:breathe_better/page/front_page.dart';
-import 'package:breathe_better/page/intro_page.dart';
 import 'package:breathe_better/page/login_page.dart';
 import 'package:breathe_better/page/signup_page.dart';
 import 'package:flutter/material.dart';
@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/frontpage',
       routes: <String, WidgetBuilder> {
       '/frontpage': (BuildContext context) => FrontPage(),
-      // '/intropage': (BuildContext context) => IntroPage(),
+      '/chooseusertype': (BuildContext context) => ChooseUserType(),
       '/login': (BuildContext context) => LoginPage(),
       '/signup': (BuildContext context) => SignUpPage()
     },

@@ -1,12 +1,11 @@
-// import 'package:breathe_better/config/style/style.dart';
-// import 'package:breathe_better/components/custom_text_field.dart';
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
-// import 'package:flutter/src/widgets/framework.dart';
-// import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:google_fonts/google_fonts.dart';
+
 import '../config/config_color.dart';
+
 import 'package:flutter_onboarding_slider/flutter_onboarding_slider.dart';
+
 import 'package:breathe_better/page/signup_page.dart';
 import 'package:breathe_better/page/login_page.dart';
 import 'package:breathe_better/components/text_bubble.dart';
@@ -15,6 +14,8 @@ import 'package:breathe_better/components/text_bubble.dart';
 
 class FrontPage extends StatelessWidget {
   double textBubbleFontSize = 17.0;
+  Color textBubbleFontColour = Colors.black;
+  TextAlign textBubbleFontAlign = TextAlign.left;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +24,7 @@ class FrontPage extends StatelessWidget {
       onFinish: () {
         Navigator.pushNamed(
           context,
-          "/signup"
+          "/chooseusertype"
         );
       },
       finishButtonStyle: FinishButtonStyle(
@@ -162,6 +163,8 @@ class FrontPage extends StatelessWidget {
                 bubbleColour: Color.fromARGB(255, 223, 223, 223),
                 borderRadius: 30,
                 textFontSize: textBubbleFontSize,
+                textColour: textBubbleFontColour,
+                textBubbleAlign: textBubbleFontAlign,
               ),
               // Point 2
               TextBubble(
@@ -169,6 +172,8 @@ class FrontPage extends StatelessWidget {
                 bubbleColour: Color.fromARGB(255, 223, 223, 223),
                 borderRadius: 30,
                 textFontSize: textBubbleFontSize,
+                textColour: textBubbleFontColour,
+                textBubbleAlign: textBubbleFontAlign,
               ),
               // Point 3
               TextBubble(
@@ -176,6 +181,8 @@ class FrontPage extends StatelessWidget {
                 bubbleColour: Color.fromARGB(255, 223, 223, 223),
                 borderRadius: 30,
                 textFontSize: textBubbleFontSize,
+                textColour: textBubbleFontColour,
+                textBubbleAlign: textBubbleFontAlign,
               ),
               // Point 4
               TextBubble(
@@ -183,6 +190,8 @@ class FrontPage extends StatelessWidget {
                 bubbleColour: Color.fromARGB(255, 223, 223, 223),
                 borderRadius: 30,
                 textFontSize: textBubbleFontSize,
+                textColour: textBubbleFontColour,
+                textBubbleAlign: textBubbleFontAlign,
               ),
               Padding(
                 padding: EdgeInsets.only(top: 18.0),
