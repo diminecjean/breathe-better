@@ -8,12 +8,16 @@ class TextBubble extends StatelessWidget {
   TextBubble({
     super.key,
     required this.inputText,
+    required this.textBubbleAlign,
     required this.bubbleColour,
+    required this.textColour,
     required this.borderRadius,
     required this.textFontSize,
   });
   String inputText;
+  TextAlign textBubbleAlign;
   Color bubbleColour;
+  Color textColour;
   double borderRadius;
   double textFontSize;
 
@@ -29,11 +33,11 @@ class TextBubble extends StatelessWidget {
       ),
       child:Text(
               inputText,
-              textAlign: TextAlign.left,
+              textAlign: textBubbleAlign,
               style: 
                 GoogleFonts.openSans(
                   textStyle:TextStyle(
-                    // color: Color.fromARGB(66, 0, 0, 0),
+                    color: textColour,
                     fontSize: textFontSize,
                     fontWeight: FontWeight.w600,
                   ),
